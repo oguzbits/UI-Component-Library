@@ -13,7 +13,7 @@ const meta: Meta<typeof Button> = {
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
     variant: {
-      options: ["default", "secondary", "ghost", "destructive"],
+      options: ["default", "secondary", "ghost", "destructive", "link"],
       control: { type: "select" },
     },
     size: {
@@ -27,25 +27,48 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
-  render: () => <Button variant="default">Button</Button>,
+  args: {
+    variant: "default",
+    size: "default",
+    children: "Button",
+  },
 };
 
 export const Secondary: Story = {
-  render: () => <Button variant="secondary">Button</Button>,
+  args: {
+    variant: "secondary",
+    size: "default",
+    children: "Button",
+  },
 };
 
 export const Ghost: Story = {
-  render: () => <Button variant="ghost">Button</Button>,
+  args: {
+    variant: "ghost",
+    size: "default",
+    children: "Button",
+  },
 };
 
 export const Destructive: Story = {
-  render: () => <Button variant="destructive">Button</Button>,
+  args: {
+    variant: "destructive",
+    size: "default",
+    children: "Button",
+  },
+};
+
+export const Link: Story = {
+  args: {
+    variant: "link",
+    size: "default",
+    children: "Button",
+  },
 };
 
 export const Icon: Story = {
-  render: () => (
-    <Button variant="default" size="icon">
-      Button
-    </Button>
-  ),
+  args: {
+    variant: "default",
+    size: "default",
+  },
 };
