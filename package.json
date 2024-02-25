@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "tw-config-viewer": "tailwind-config-viewer -o",
+    "export-tw-config": "tailwind-config-viewer export ./output-dir"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
@@ -18,6 +20,7 @@
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
+    "tailwind-config-viewer": "^1.7.3",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7"
   },
